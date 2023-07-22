@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Shower Presentation Engine</title>
+  <title>BSA React Base</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
@@ -30,6 +31,7 @@
     }
   </style>
 </head>
+
 <body class="shower list">
 
   <header class="caption">
@@ -40,7 +42,7 @@
   <section class="slide" id="cover">
     <h2>React</h2>
     <p>A JavaScript library for building user interfaces</p>
-    <a class="cover__link" href="https://reactjs.org/" target="_blank" rel="noreferrer">
+    <a class="cover__link" href="https://react.dev/" target="_blank" rel="noreferrer">
       <img src="pictures/react-logo.svg" width="150" height="150" alt="React logo">
     </a>
     <p class="copyright right">
@@ -101,36 +103,24 @@
     </style>
   </section>
 
-  <section class="slide slide--bsa" id="library">
-    <h2 class="library__title">React <span class="next"> — a library</span></h2>
-    <a class="library__link bottom-link" href="https://reactjs.org/" target="_blank" rel="noreferrer">
-      reactjs.org
-    </a>
-
-    <style>
-      #library .library__title {
-        margin: 180px 0 0;
-      }
-    </style>
-  </section>
-
   <section class="slide slide--bsa" id="why">
     <h2>Why React</h2>
     <ul>
       <li class="next">Popular</li>
       <li class="next">Simple</li>
       <li class="next">Fast 💨</li>
-      <li class="next">Ecosystem</li>
-      <li class="next">Environments (client, server, mobile)</li>
+      <li class="next">Flexible</li>
+      <li class="next">Ecosystem ✨</li>
     </ul>
   </section>
 
-  <section class="slide slide--bsa" id="why-needed">
-    <h2>Why React is needed</h2>
+  <section class="slide slide--bsa" id="when-use">
+    <h2>When to use React</h2>
     <ul class="next">
-      <li>Rendering</li>
-      <li class="next">Simplifies interface management</li>
-      <li class="next">Good for projects with dynamic content</li>
+      <li>Complex user interfaces</li>
+      <li class="next">Large-scale applications</li>
+      <li class="next">High-performance applications</li>
+      <li class="next">Cross-platform applications</li>
     </ul>
   </section>
 
@@ -140,7 +130,6 @@
       <li>
         JSX. JavaScript syntax extension
         <ul class="next">
-          <li>React Component Language</li>
           <li class="next">HTML + JavaScript === JSX</li>
         </ul>
       </li>
@@ -149,151 +138,6 @@
       <li class="next">React === View (MV*)</li>
       <li class="next">Works on both sides: client & server</li>
     </ul>
-  </section>
-
-  <section class="slide slide--bsa" id="app-overview">
-    <h2 class="app-overview__title">App Overview</h2>
-    <a class="app-overview__link" href="http://localhost:3000/" target="_blank" rel="noreferrer">
-      <img src="pictures/todolist-logo.svg" width="280" height="280" alt="Todo Logo">
-    </a>
-
-    <style>
-      #app-overview {
-        display: flex;
-        flex-direction: column;
-      }
-
-      #app-overview .app-overview__title {
-        margin-bottom: 50px;
-      }
-
-      #app-overview .app-overview__link {
-        align-self: center;
-        background-image: none;
-      }
-    </style>
-  </section>
-
-  <section class="slide slide--bsa" id="commits-react">
-    <h2>Commits</h2>
-    <ul>
-      <li>
-        <a class="app-overview__link" href="https://github.com/what1s1ove/bsa-react-app/pull/1/commits/4350523966a2f5bee44b76f37ca354bc647b75ea" target="_blank" rel="noreferrer">
-          add header component
-        </a>
-      </li>
-      <li>
-        <a class="app-overview__link" href="https://github.com/what1s1ove/bsa-react-app/pull/1/commits/4e875b87608b11e217e0a05da734a421002fe50f" target="_blank" rel="noreferrer">
-          refactor header component with jsx
-        </a>
-      </li>
-      <li>
-        <a class="app-overview__link" href="https://github.com/what1s1ove/bsa-react-app/pull/1/commits/93f64ddc802b2d5a5b3d3fb05e6bfe7b83026095" target="_blank" rel="noreferrer">
-          add full jsx markup
-        </a>
-      </li>
-    </ul>
-    <a class="bottom-link" href="https://github.com/what1s1ove/bsa-react-app/pull/1" target="_blank" rel="noreferrer">
-      todolist
-    </a>
-  </section>
-
-  <section class="slide slide--bsa" id="virtual-dom">
-    <h2>Virtual DOM</h2>
-    <img class="virtual-dom__img next" src="pictures/virtual-dom.png" width="600" height="350" alt="Virtual DOM">
-    <a class="virtual-dom__link bottom-link" href="https://reactjs.org/docs/faq-internals.html" target="_blank" rel="noreferrer">
-      reactjs.org/virtual-dom
-    </a>
-
-    <style>
-      #virtual-dom .virtual-dom__img {
-        display: block;
-        margin: 0 auto;
-      }
-    </style>
-  </section>
-
-  <section class="slide slide--bsa" id="synthetic-event">
-    <h2>SyntheticEvent</h2>
-    <div class="synthetic-event__wrapper next">
-      <img class="synthetic-event__img" src="pictures/synthetic-event.jpeg" width="300" height="250" alt="Synthetic Event">
-      <pre class="synthetic-event__code next">
-        <code><span class="comment">// HTML Element</span></code>
-        <code>&lt;button <mark>onclick="handleClick();"</mark>&gt;Click&lt;/button&gt;</code>
-        <code>&lt;input <mark>onblur="handleBlur();"</mark> value="" type="text"&gt;</code>
-        <code> </code>
-        <code><span class="comment">// React Element</span></code>
-        <code>&lt;button <mark>onClick={handleClick}</mark>&gt;Click&lt;/button&gt;</code>
-        <code>&lt;input <mark>onBlur={handleBlur}</mark> defaultValue="" type="text" /&gt;</code>
-      </pre>
-    </div>
-    <a class="synthetic-event__link bottom-link" href="https://reactjs.org/docs/events.html" target="_blank" rel="noreferrer">
-      SyntheticEvent
-    </a>
-
-    <style>
-      #synthetic-event .synthetic-event__wrapper {
-        display: flex;
-        align-items: center;
-        gap: 80px;
-        margin: 80px 0 0;
-      }
-
-      #synthetic-event .synthetic-event__code {
-        font-size: 14px;
-      }
-    </style>
-  </section>
-
-  <section class="slide slide--bsa" id="prop-type">
-    <h2>PropTypes</h2>
-    <pre class="prop-type__code next">
-      <code><span class="comment">// src/components/greeting/greeting.jsx</span></code>
-      <code>import <mark>PropTypes</mark> from 'prop-types';</code>
-      <div class="next">
-        <code> </code>
-        <code>const Greeting = ({ name }) => (</code>
-        <code>  &lt;h1&gt;Hello, {name}&lt;/h1&gt;</code>
-        <code>);</code>
-        <code> </code>
-        <code>Greeting.propTypes = {</code>
-        <code>  name: <mark>PropTypes.string</mark></code>
-        <code>};</code>
-      </div>
-    </pre>
-    <a class="prop-type__link bottom-link" href="https://reactjs.org/docs/typechecking-with-proptypes.html" target="_blank" rel="noreferrer">
-      PropTypes
-    </a>
-
-    <style>
-      #prop-type .prop-type__code {
-        font-size: 18px;
-      }
-    </style>
-  </section>
-
-  <section class="slide slide--bsa" id="commits-props">
-    <h2>Commits</h2>
-    <ul>
-      <li>
-        <a class="app-overview__link" href="https://github.com/what1s1ove/bsa-react-app/pull/1/commits/b33a67f6ab3272532ab73ef97c69f2048ed43e1a" target="_blank" rel="noreferrer">
-          add count render todo
-        </a>
-      </li>
-      <li>
-        <a class="app-overview__link" href="https://github.com/what1s1ove/bsa-react-app/pull/1/commits/fb1d834fbf4437e54e8924598acf4a9fe8d2bbb8" target="_blank" rel="noreferrer">
-          add proptypes for count
-        </a>
-      </li>
-      <li>
-        <a class="app-overview__link" href="https://github.com/what1s1ove/bsa-react-app/pull/1/commits/f9e09f08a4dec36c9005b043e56e478e9e8c5383" target="_blank" rel="noreferrer">
-          add unique todos to dashboard
-        </a>
-      </li>
-    </ul>
-    <a class="bottom-link" href="https://github.com/what1s1ove/bsa-react-app/pull/1" target="_blank" rel="noreferrer">
-      todolist
-    </a>
   </section>
 
   <section class="slide slide--bsa" id="state-is">
@@ -308,20 +152,21 @@
   </section>
 
   <section class="slide slide--bsa" id="state-variants">
-    <h2>Solution Options</h2>
+    <h2>Solutions</h2>
     <ol class="next">
-      <li>Implement a chain of callback</li>
+      <li>Implement a chain of callbacks</li>
       <li class="next">Save to global scope. For example <code>window.currentState</code></li>
-      <li class="next">Move logic to the URL and set the task to the backend developer</li>
+      <li class="next">Move the logic to the URL and delegate the task to a backend developer</li>
     </ol>
   </section>
 
   <section class="slide slide--bsa" id="state-solutions">
-    <h2>Problems of the solutions</h2>
+    <h2>Problems of each solution</h2>
     <ol class="next">
       <li>The application must remember the order of callbacks</li>
       <li class="next">We'll have to update the whole app with <code>ReactDOM.render</code></li>
-      <li class="next">Excellent option. But we don't have a backend developer, and the state will be rigidly tied to the URL</li>
+      <li class="next">Nice option. But we don't have a backend developer, and the state will be rigidly tied to
+        the URL</li>
     </ol>
   </section>
 
@@ -329,39 +174,16 @@
     <h2>State in React ⚛️</h2>
     <ul class="next">
       <li>Props outside, state inside</li>
-      <li class="next">Updating the state causes/props updating the component and all descendants</li>
+      <li class="next">Updating the state/props causes updating a component and all descendants</li>
       <li class="next">The state is updated asynchronously</li>
       <li class="next">The state is controlled by <b>hooks</b></li>
     </ul>
   </section>
 
-  <section class="slide slide--bsa" class="forms">
-    <h2>Forms 📑</h2>
-    <ul class="next">
-      <li>
-        With controlled controls <br>
-        <i><b>React</b> is fully responsible for the behavior of elements</i>
-      </li>
-      <li class="next">
-        With uncontrolled controls <br>
-        <i><b>Browser</b> is responsible for the behavior</i>
-      </li>
-      <li class="next">Mixed</li>
-    </ul>
-  </section>
-
-  <section class="slide slide--bsa" class="controlled-components">
-    <h2>Controlled Components 🧱</h2>
-    <ul class="next">
-      <li>The field value is stored in the state</li>
-      <li class="next">The value is changed through a props callback</li>
-      <li class="next">The logic for handling value changes is entirely up to the developer.</li>
-    </ul>
-  </section>
-
   <section class="slide slide--bsa" id="react-hooks">
     <h2 class="react-hooks__title">React Hooks 🪝</h2>
-    <p class="react-hooks__desc next">Hooks are an addition in React <b>16.8</b>. They let you use the state and do side effects</p>
+    <p class="react-hooks__desc next">Hooks are an addition in React <b>16.8</b>. They let you use the state and do side
+      effects</p>
     <pre class="react-hooks__code next">
       <code>const Counter = () => {</code>
       <code class="mark next">  const [count, setCount] = React.useState(0);</code>
@@ -375,7 +197,8 @@
       <code>  ); </code>
       <code>}</code>
     </pre>
-    <a class="react-hooks__link bottom-link" href="https://reactjs.org/docs/hooks-intro.html" target="_blank" rel="noreferrer">reactjs.org/hooks-intro</a>
+    <a class="react-hooks__link bottom-link" href="https://react.dev/reference/react" target="_blank"
+      rel="noreferrer">Hooks</a>
 
     <style>
       #react-hooks .react-hooks__title {
@@ -401,7 +224,7 @@
   <section class="slide slide--bsa" id="how-hooks-work">
     <h2>How Hooks Work</h2>
     <ul>
-      <li class="next">Hook is a global function. The function is called every time the component is rendered</li>
+      <li class="next">Hook is a global function. The function is called every time a component is rendered</li>
       <li class="next">React tracks calls of these functions</li>
       <li class="next">Hook is a common function but with a bit of magic 🪄</li>
     </ul>
@@ -410,28 +233,38 @@
   <section class="slide slide--bsa" id="hooks-limitations">
     <h2>Hooks Limitations</h2>
     <ul class="next">
-      <li>The sequence of hook is important. Cannot be used in conditions, loops</li>
-      <li class="next">Hooks can only be used in components or custom hooks</li>
-      <li class="next">No support for all lifecycle methods: <code>getSnapshotBeforeUpdate</code>, <code>getDerivedStateFromError</code>, <code>componentDidCatch</code></li>
+      <li>Cannot be used inside loops, conditions, or nested functions</li>
+      <li class="next">Can only be called from React Functions
+        <ul class="next">
+          <li>Function Components</li>
+          <li class="next">Custom Hooks</li>
+        </ul>
+      </li>
+      <li class="next">Do not support all lifecycle methods: <code>getSnapshotBeforeUpdate</code>,
+        <code>getDerivedStateFromError</code>, <code>componentDidCatch</code>
+      </li>
     </ul>
   </section>
 
   <section class="slide slide--bsa" id="react-hooks-api">
-    <h2 class="react-hooks-api__title">Hooks API 🪝</h2>
+    <h2 class="react-hooks-api__title">Hooks API</h2>
     <div class="react-hooks-api__wrapper next">
       <ul class="react-hooks-api__list">
         <li class="react-hooks-api__item">
-          <a href="https://reactjs.org/docs/hooks-reference.html#usestate" target="_blank" rel="noreferrer">useState</a>
+          <a href="https://react.dev/reference/react/useState" target="_blank" rel="noreferrer">useState</a>
         </li>
         <li class="react-hooks-api__item next">
-          <a href="https://reactjs.org/docs/hooks-reference.html#useeffect" target="_blank" rel="noreferrer">useEffect</a>
+          <a href="https://react.dev/reference/react/useEffect" target="_blank" rel="noreferrer">useEffect</a>
         </li>
         <li class="react-hooks-api__item next">
-          <a href="https://reactjs.org/docs/hooks-reference.html#usecallback" target="_blank" rel="noreferrer">useCallback</a>
+          <a href="https://react.dev/reference/react/useCallback" target="_blank" rel="noreferrer">useCallback</a>
         </li>
         <li class="react-hooks-api__item next">
-          <a href="https://reactjs.org/docs/hooks-reference.html#usememo" target="_blank" rel="noreferrer">useMemo</a>
-          and etc.
+          <a href="https://react.dev/reference/react/useMemo" target="_blank" rel="noreferrer">useMemo</a>
+        </li>
+        <li class="react-hooks-api__item next">
+          <a href="https://react.dev/reference/react/useRef" target="_blank" rel="noreferrer">useRef</a>
+          and others
         </li>
       </ul>
       <pre class="react-hooks-api__code">
@@ -453,8 +286,9 @@
         <code>}</code>
       </pre>
     </div>
-    <a class="react-hooks-api__link bottom-link" href="https://reactjs.org/docs/hooks-reference.html" target="_blank" rel="noreferrer">
-      reactjs.org/hooks-api
+    <a class="react-hooks-api__link bottom-link" href="https://react.dev/reference/react" target="_blank"
+      rel="noreferrer">
+      Hooks
     </a>
 
     <style>
@@ -494,7 +328,8 @@
       <code>  }; </code>
       <code>}; </code>
     </pre>
-    <a class="custom-hooks__link bottom-link" href="https://reactjs.org/docs/hooks-custom.html" target="_blank" rel="noreferrer">reactjs.org/custom-hooks</a>
+    <a class="custom-hooks__link bottom-link" href="https://react.dev/learn/reusing-logic-with-custom-hooks"
+      target="_blank" rel="noreferrer">Reusing logic with custom hooks</a>
 
     <style>
       #custom-hooks .custom-hooks__code {
@@ -509,68 +344,134 @@
     </style>
   </section>
 
-  <section class="slide slide--bsa" id="commits-state">
-    <h2>Commits</h2>
-    <ul>
-      <li>
-        <a class="app-overview__link" href="https://github.com/what1s1ove/bsa-react-app/pull/1/commits/0551c3c717a19dc2ee9309c293056506da35c485" target="_blank" rel="noreferrer">
-          add state for application
-        </a>
-      </li>
-    </ul>
-    <a class="bottom-link" href="https://github.com/what1s1ove/bsa-react-app/pull/1" target="_blank" rel="noreferrer">
-      todolist
-    </a>
-  </section>
-
-  <section class="slide slide--bsa" id="rca">
-    <h2 class="rca__title">React Create App</h2>
-    <img class="rca__img next" src="pictures/rca.svg" width="300" height="300" alt="Todo Logo">
-    <a class="rca__link bottom-link" href="https://create-react-app.dev/" target="_blank" rel="noreferrer">
-      React Create App
+  <section class="slide slide--bsa" id="synthetic-event">
+    <h2>SyntheticEvent</h2>
+    <div class="synthetic-event__wrapper next">
+      <img class="synthetic-event__img" src="pictures/synthetic-event.jpeg" width="300" height="250"
+        alt="Synthetic Event">
+      <pre class="synthetic-event__code next">
+        <code><span class="comment">// HTML Element</span></code>
+        <code>&lt;button <mark>onclick="handleClick();"</mark>&gt;Click&lt;/button&gt;</code>
+        <code>&lt;input <mark>onblur="handleBlur();"</mark> value="" type="text"&gt;</code>
+        <code> </code>
+        <code><span class="comment">// React Element</span></code>
+        <code>&lt;button <mark>onClick={handleClick}</mark>&gt;Click&lt;/button&gt;</code>
+        <code>&lt;input <mark>onBlur={handleBlur}</mark> defaultValue="" type="text" /&gt;</code>
+      </pre>
+    </div>
+    <a class="synthetic-event__link bottom-link"
+      href="https://react.dev/reference/react-dom/components/common#react-event-object" target="_blank"
+      rel="noreferrer">
+      React event object
     </a>
 
     <style>
-      #rca {
+      #synthetic-event .synthetic-event__wrapper {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+        margin: 80px 0 0;
       }
 
-      #rca .rca__img {
-        display: block;
-        margin: 20px auto 0;
+      #synthetic-event .synthetic-event__code {
+        font-size: 14px;
       }
     </style>
   </section>
 
-  <section class="slide slide--bsa" id="commits-rca">
-    <h2>Commits</h2>
-    <ul>
+  <section class="slide slide--bsa" id="controlled-uncontrolled-components">
+    <h2>Controlled and Uncontrolled Components</h2>
+    <ul class="next">
       <li>
-        <a class="app-overview__link" href="https://github.com/what1s1ove/bsa-react-app/pull/1/commits/24139b9f85434eb455910fdcc1d4a870d7db3655" target="_blank" rel="noreferrer">
-          add rca to application
-        </a>
+        Controlled <br>
+        <i>a component that is controlled by <b>React state</b></i>
+      </li>
+      <li class="next">
+        Uncontrolled <br>
+        <i>a component that maintains its own <b>internal state</b></i>
       </li>
     </ul>
-    <a class="bottom-link" href="https://github.com/what1s1ove/bsa-react-app/pull/1" target="_blank" rel="noreferrer">
-      todolist
+    <a class="synthetic-event__link bottom-link"
+      href="https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components"
+      target="_blank" rel="noreferrer">
+      Controlled and uncontrolled components
     </a>
   </section>
 
-  <section class="slide slide--bsa" id="react-devtools">
-    <h2 class="react-devtools__title">React Developer Tools</h2>
-    <img class="react-devtools__img next" src="pictures/react-devtools.png" width="500" height="100"  alt="React devtools">
-    <a class="react-devtools__link bottom-link" href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en" target="_blank" rel="noreferrer">
-      React DevTools
-    </a>
+  <section class="slide slide--bsa" id="uncontrolled-components">
+    <h2>Uncontrolled Components</h2>
+    <pre class="uncontrolled-components__code next">
+      <code>const UncontrolledInput = ({ defaultValue }) =&gt; {</code>
+      <code class="mark">  const [value, setValue] = useState(defaultValue);</code>
+      <code> </code>
+      <code>  return &lt;input value={value} onChange={(e) =&gt; setValue(e.target.value)} /&gt;;</code>
+      <code>};</code>
+      <code> </code>
+      <code>const LoginForm = () =&gt; {</code>
+      <code>  return (</code>
+      <code>    &lt;form&gt;</code>
+      <code class="mark">      &lt;UncontrolledInput defaultValue="" /&gt;</code>
+      <code>      &lt;button&gt;Submit&lt;/button&gt;</code>
+      <code>    &lt;/form&gt;</code>
+      <code>  );</code>
+      <code>};</code>
+    </pre>
 
     <style>
-      #react-devtools .react-devtools__img {
+      #uncontrolled-components .uncontrolled-components__code {
+        display: none;
+        font-size: 13px;
+      }
+
+      #uncontrolled-components .uncontrolled-components__code.active,
+      #uncontrolled-components .uncontrolled-components__code.visited {
         display: block;
-        margin: 130px auto;
       }
     </style>
   </section>
+
+  <section class="slide slide--bsa" id="controlled-components">
+    <h2>Controlled Components</h2>
+    <pre class="controlled-components__code next">
+      <code>const ControlledInput = ({ value, onChange }) =&gt; (</code>
+      <code>  &lt;input value={value} onChange={(e) =&gt; onChange(e.target.value)} /&gt;</code>
+      <code>);</code>
+      <code> </code>
+      <code>const LoginForm = () =&gt; {</code>
+      <code class="mark">  const [email, setEmail] = useState("");</code>
+      <code> </code>
+      <code>  return (</code>
+      <code>    &lt;form&gt;</code>
+      <code class="mark">      &lt;ControlledInput value={email} onChange={setEmail} &gt;</code>
+      <code>      &lt;button&gt;Submit&lt;/button&gt;</code>
+      <code>    &lt;/form&gt;</code>
+      <code>  );</code>
+      <code>};</code>
+    </pre>
+
+    <style>
+      #controlled-components .controlled-components__code {
+        display: none;
+        font-size: 13px;
+      }
+
+      #controlled-components .controlled-components__code.active,
+      #controlled-components .controlled-components__code.visited {
+        display: block;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="routing">
+    <h2 class="routing__title">Routing and Navigation 🧭</h2>
+
+    <style>
+      #routing .routing__title {
+        margin: 180px 0 0;
+      }
+    </style>
+  </section>
+
 
   <section class="slide slide--bsa" id="url">
     <h2 class="url__title">URL</h2>
@@ -594,28 +495,20 @@
   <section class="slide slide--bsa" id="location-api">
     <h2 class="location-api__title">Location API 🧭</h2>
     <p class="location-api__description next">Control URL using JavaScript</p>
-    <a class="location-api__link bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/API/Location" target="_blank" rel="noreferrer">
+    <img class="location-api__img next" class="next" src="pictures/academy-link.png" width="650" alt="Academy link">
+    <a class="react-router__link bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/API/Location"
+      target="_blank" rel="noreferrer">
       Location API
     </a>
 
     <style>
-      #location-api .location-api__title {
-        margin: 180px 0 0;
+      #location-api .location-api__description {
+        margin-bottom: 10px;
       }
-    </style>
-  </section>
 
-  <section class="slide slide--bsa" id="location-api-example">
-    <h2 class="location-api__title">Location API 🧭</h2>
-    <img class="react-router__img next" class="next" src="pictures/academy-link.png" width="650" alt="Academy link">
-    <a class="react-router__link bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/API/Location" target="_blank" rel="noreferrer">
-      Location API
-    </a>
-
-    <style>
-      #location-api-example .react-router__img {
+      #location-api .location-api__img {
         display: block;
-        margin: 80px auto 0;
+        margin: 0 auto;
       }
     </style>
   </section>
@@ -623,19 +516,6 @@
   <section class="slide slide--bsa" id="history-api">
     <h2 class="history-api__title">History API ⏳</h2>
     <p class="history-api__description next">Control movement through application using JavaScript</p>
-    <a class="history-api__link bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/API/History_API" target="_blank" rel="noreferrer">
-      History API
-    </a>
-
-    <style>
-      #history-api .history-api__title {
-        margin: 180px 0 0;
-      }
-    </style>
-  </section>
-
-  <section class="slide slide--bsa" id="history-api-examples">
-    <h2 class="history-api__title">History API ⏳</h2>
     <ul class="next">
       <li>
         <code>window.history.forward()</code>
@@ -650,14 +530,22 @@
         <code>window.history.pushState(state, title, url)</code>
       </li>
     </ul>
-    <a class="history-api-examples__link bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/API/History_API" target="_blank" rel="noreferrer">
+    <a class="history-api__link bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/API/History_API"
+      target="_blank" rel="noreferrer">
       History API
     </a>
+
+    <style>
+      #history-api .history-api__description {
+        margin-bottom: 10px;
+      }
+    </style>
   </section>
 
   <section class="slide slide--bsa" id="react-router">
-    <h2 class="react-router__title">React Router 🗺</h2>
-    <img class="react-router__img next" class="next" src="pictures/react-router-logo.svg" width="350" height="200" alt="React Router">
+    <h2 class="react-router__title">React Router</h2>
+    <img class="react-router__img next" class="next" src="pictures/react-router-logo.svg" width="350" height="200"
+      alt="React Router">
     <a class="react-router__link bottom-link" href="https://reactrouter.com/" target="_blank" rel="noreferrer">
       React Router
     </a>
@@ -737,18 +625,38 @@
     </style>
   </section>
 
-  <section class="slide slide--bsa" id="commits-router">
-    <h2>Commits</h2>
-    <ul>
-      <li>
-        <a class="app-overview__link" href="https://github.com/what1s1ove/bsa-react-app/pull/1/commits/304702c206b6231cffce2eda5bd8925bf12c234b" target="_blank" rel="noreferrer">
-          add react-router
-        </a>
-      </li>
-    </ul>
-    <a class="bottom-link" href="https://github.com/what1s1ove/bsa-react-app/pull/1" target="_blank" rel="noreferrer">
-      todolist
+  <section class="slide slide--bsa" id="virtual-dom">
+    <h2>Virtual DOM</h2>
+    <img class="virtual-dom__img next" src="pictures/virtual-dom.png" width="600" height="350" alt="Virtual DOM">
+    <a class="virtual-dom__link bottom-link" href="https://reactjs.org/docs/faq-internals.html" target="_blank"
+      rel="noreferrer">
+      Virtual DOM
     </a>
+
+    <style>
+      #virtual-dom .virtual-dom__img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="react-devtools">
+    <h2 class="react-devtools__title">React Developer Tools</h2>
+    <img class="react-devtools__img next" src="pictures/react-devtools.png" width="500" height="100"
+      alt="React devtools">
+    <a class="react-devtools__link bottom-link"
+      href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en"
+      target="_blank" rel="noreferrer">
+      React DevTools
+    </a>
+
+    <style>
+      #react-devtools .react-devtools__img {
+        display: block;
+        margin: 130px auto;
+      }
+    </style>
   </section>
 
   <section class="slide slide--bsa" id="legacy">
@@ -777,7 +685,8 @@
       <code>  }</code>
       <code>}</code>
     </pre>
-    <a class="class-components__link bottom-link" href="https://reactjs.org/docs/react-component.html" target="_blank" rel="noreferrer">
+    <a class="class-components__link bottom-link" href="https://react.dev/reference/react/Component" target="_blank"
+      rel="noreferrer">
       React.Component
     </a>
 
@@ -790,9 +699,12 @@
 
   <section class="slide slide--bsa" id="react-lifecycle">
     <h2>Class Components Lifecycle Methods</h2>
-    <img class="react-lifecycle__img next" src="pictures/react-lifecycle.png" width="530" height="350" alt="Class Components Lifecycle Methods">
-    <a class="react-lifecycle__link bottom-link" href="https://reactjs.org/docs/react-component.html" target="_blank" rel="noreferrer">
-      The Component Lifecycle
+    <img class="react-lifecycle__img next" src="pictures/react-lifecycle.png" width="530" height="350"
+      alt="Class Components Lifecycle Methods">
+    <a class="react-lifecycle__link bottom-link"
+      href="https://react.dev/reference/react/Component#adding-lifecycle-methods-to-a-class-component" target="_blank"
+      rel="noreferrer">
+      Adding lifecycle methods to a class component
     </a>
 
     <style>
@@ -808,15 +720,22 @@
     <pre class="class-pure-components__code next">
       <code><span class="comment">// By default with a shallow prop and state comparison</code>
       <code>class Welcome extends React.PureComponent {}</code>
-      <div class="next">
+      <div class="class-pure-components__code next">
         <code> </code>
         <code><span class="comment">// By default with a shallow prop and state comparison</code>
         <code>const Welcome = React.memo((props) => {})</code>
       </div>
     </pre>
-    <a class="react-lifecycle__link bottom-link" href="https://reactjs.org/docs/react-api.html" target="_blank" rel="noreferrer">
-      React Api
+    <a class="react-lifecycle__link bottom-link" href="https://react.dev/reference/react/apis" target="_blank"
+      rel="noreferrer">
+      React APIs
     </a>
+
+    <style>
+      #class-pure-components .class-pure-components__code {
+        font-size: 14px;
+      }
+    </style>
   </section>
 
   <section class="slide slide--bsa" id="hoc">
@@ -842,7 +761,8 @@
       <code>  }</code>
       <code>}</code>
     </pre>
-    <a class="hoc__link bottom-link" href="https://reactjs.org/docs/higher-order-components.html" target="_blank" rel="noreferrer">
+    <a class="hoc__link bottom-link" href="https://reactjs.org/docs/higher-order-components.html" target="_blank"
+      rel="noreferrer">
       Higher-Order Components
     </a>
 
@@ -884,4 +804,5 @@
   <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
 
 </body>
+
 </html>
